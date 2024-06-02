@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <TopLabel/>
-        <div className="max-w-[1035px] mx-auto"> <NavBar/>{children}</div></body>
+        <div className="max-w-[1250px] mx-auto"> <NavBar/>{children}</div></body>
     </html>
   );
 }
