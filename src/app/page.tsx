@@ -1,11 +1,11 @@
 import Hero from "./components/Hero";
-import Promotions from "./components/Promotions";
+import PromotionsEvent from "./components/PromotionsEvent";
 
 const Page = () => {
   return (
     <div>
      <Hero/>
-     <Promotions/>
+     <PromotionsEvent/>
 
     </div>
   );
