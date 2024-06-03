@@ -17,7 +17,7 @@ import React from 'react';
 
 const NewsLetter = () => {
     return (
-        <section className='pt-40 pb-40 lg:pt-80 lg:pb-80 flex flex-col relative'>
+        <section className='pt-40 pb-40 mb-32 lg:pt-80 lg:pb-80 flex flex-col relative'>
             <div className="absolute inset-0 flex justify-center items-center -z-10">
                 <h1 className="text-slate-300/50 text-6xl lg:text-8xl font-bold">NEWSLETTER</h1>
             </div>

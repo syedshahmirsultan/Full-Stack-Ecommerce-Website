@@ -37,16 +37,16 @@ const Jewellery = () => {
 </h1>
 
 </div>
-<div className='flex flex-col justify-center ml-20 lg:flex-row lg:gap-x-4 w-[60%] lg:ml-20 mt-8 lg:mt-0'>
+<div className='flex flex-col justify-center ml-20 lg:flex-row lg:gap-x-4 w-[60%] lg:ml-20 mt-24 lg:mt-0'>
 <div>
 <Image src="/images/jewelleryImage.png" alt="Jewellery Section Image" width={1000} height={1000} className="w-full  h-full self-center lg:h-full"/>
 </div>
-<div className="mt-6 lg:mt-2 lg:ml-3">
-   <p className='text-[18px] text-gray-700 '>
+<div className="mt-6 lg:mt-2 lg:ml-3 text-center">
+   <p className='text-[20px] text-gray-700 '>
    This piece is ethically<br/> crafted in our small<br/> family-owned workshop in Peru with unmatched<br/> attention to detail and<br/> care. The Natural color<br/> is the actual
     natural<br/> color of the fiber<br/>, undyed and 100%<br/> traceable.
     </p>
-    <button className="px-6 py-2 mt-8 text-gray-100 text-center bg-gray-900  rounded-xl hover:bg-gray-800">
+    <button className="px-6 py-2 mt-8 text-gray-100 text-center bg-gray-900  rounded-lg hover:bg-gray-800">
 See All Products
         </button> 
 </div>

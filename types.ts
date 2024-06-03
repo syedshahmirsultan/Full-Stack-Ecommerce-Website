@@ -28,7 +28,7 @@ export default interface singleProductType {
         productname: string,
         slug: singleProductTypeSlug[],
         price: number,
-        size: any[],
+        size: string[],
         description:singleProductTypeDescription[]
       }
 

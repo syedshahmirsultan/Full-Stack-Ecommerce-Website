@@ -34,10 +34,10 @@ const Footer = () => {
             </div>
             </div>   
 
-    <div className="h-24 lg:h-16 w-full bg-gray-200 mt-28 pb-12 ">
+    <div className="h-32 lg:h-18 w-full bg-gray-200 mt-28 pb-12 ">
 <div className="flex flex-col lg:flex-row gap-y-2 ml-4 pt-6 justify-between">
 <Link href="https://github.com/syedshahmirsultan"><p className='text-[15px] text-slate-800'>© 2024 syedshahmirsultan —@syedshahmirsultan</p></Link>
-<div className="flex gap-x-4 justify-center mr-8 mt-4">
+<div className="flex gap-x-4 justify-center mr-8 pb-4">
 <Link href="https://github.com/syedshahmirsultan"><BsGithub size={22}/></Link>
     <Link href="https://www.linkedin.com/in/syedshahmirsultan/"><BsFacebook size={22}/></Link>
 <Link href="https://github.com/syedshahmirsultan"><BsInstagram size={22}/></Link>
