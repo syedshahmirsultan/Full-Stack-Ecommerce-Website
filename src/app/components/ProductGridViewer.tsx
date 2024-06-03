@@ -46,7 +46,7 @@ const ProductGridViewer = ({ productData }: { productData: Array<singleProductTy
         <section className="flex flex-col lg:flex-row gap-x-4 w-full">
             {productData.map((item: singleProductType, index: number) => {
                 return (
-                    <Link href={`/brief/${item.slug.current}`} key={index}>
+                    <Link href={`/brief/${item.slug.current}`} key={item.slug.current}>
                         <div className='flex flex-col overflow-hidden mt-8 lg:mt-0 m-8 lg:m-0 hover:scale-110 duration-200'>
                             <div className='w-full lg:w-12/12 h-96 bg-gray-300'>
                                 <Image
