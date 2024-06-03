@@ -7,7 +7,7 @@ import AllProductGridViewer from '../components/AllProductGridViewer';
 
 
 const Search = async() => {
-const params = useSearchParams();
+const params = await useSearchParams();
 
 if(!params.has("query")) redirect('/products');
 
@@ -22,3 +22,4 @@ const data = await searchProductsFetcherFromSanity(searchValue ) as allProductsF
 }
 
 export default Search;
+
