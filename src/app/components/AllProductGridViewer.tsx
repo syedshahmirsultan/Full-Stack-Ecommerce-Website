@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { urlForImage } from '../../../sanity/lib/image';
 import Link from 'next/link';
 
-const AllProductGridViewer = ({productData}: {productData: Array<singleProductType>}) => {
+const AllProductGridViewer = ({productData }: {productData: Array<singleProductType>}) => {
     return (
         <section className="grid grid-cols-1 mt-20 lg:grid-cols-3 gap-x-4 w-full gap-y-10 mb-40">
             {productData.map((item: singleProductType) => {

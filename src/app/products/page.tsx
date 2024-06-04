@@ -13,3 +13,4 @@ const Products = async () => {
 }
 
 export default Products;
+

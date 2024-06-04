@@ -6,25 +6,31 @@ import { z } from "zod";
 
 
 
-export async function GET (req:NextRequest){
+export async function GET(req: NextRequest) {
     const url = req.nextUrl.searchParams;
 
     try {
-        if(url.has('userid')){
-const {userid} = validateUserId.parse({userid :url.get('userid')});
-const cartData = await db.select().from(cartTable).where(eq(cartTable.userid, userid));
-return NextResponse.json(cartData);
+        if (url.has('userid')) {
+            const { userid } = validateUserId.parse({ userid: url.get('userid') });
+            const cartData = await db.select().from(cartTable).where(eq(cartTable.userid, userid));
+            return NextResponse.json(cartData);
+        } else {
+            return NextResponse.json({ Message: "Userid Not Found" });
         }
     } catch (error) {
-        if(error instanceof z.ZodError){
-            return NextResponse.json ({
-                error :"Invalid Payload"},
-            {
-                status :422
-            })
+        if (error instanceof z.ZodError) {
+            return NextResponse.json({
+                error: "Invalid Payload"
+            }, {
+                status: 422
+            });
         }
+
+        const rr = (error as { message: string }).message;
+        return NextResponse.json({ error: rr });
     }
 }
+
 
 
 export async function POST (req:NextRequest){
@@ -68,7 +74,7 @@ else {
         }
  
         const rr = (error as {message :string}).message
-        return NextResponse.json ({error :rr})
+        return NextResponse.json ({ messaage:"ERROR FACING HERE"})
     }
 }
 

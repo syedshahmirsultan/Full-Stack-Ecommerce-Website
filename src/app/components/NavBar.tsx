@@ -35,9 +35,9 @@ const NavBar = () => {
             </div>
             <div className="relative hidden lg:flex items-center justify-center bg-gray-100">
       <div className="absolute bg-gray-200 h-10 w-10 rounded-full flex items-center justify-center mr-16">
-        <ShoppingCart size={24} className="text-black" />
+      <Link href="/cart"> <ShoppingCart size={24} className="text-black" />
     <div className="absolute right-1 top-[2px] bg-red-500 h-4 w-4 text-white rounded-full text-center text-xs">
-        0</div>
+        0</div></Link>
       </div>
     </div>
 <div  className="lg:hidden flex pt-4 pr-4">

@@ -3,7 +3,7 @@ import AllProductGridViewer from '../components/AllProductGridViewer';
 import { femaleProductsFetcherFromSanity } from '@/utils/apiCalling';
 import { allProductsFetcherType } from '../../../types';
 
-const FemleProducts = async () => {
+const FemaleProducts = async () => {
     const data = await femaleProductsFetcherFromSanity() as allProductsFetcherType;
     return (
         <div>
@@ -12,4 +12,9 @@ const FemleProducts = async () => {
     );
 }
 
-export default FemleProducts;
+export default FemaleProducts;
+
+
+
+
+

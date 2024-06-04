@@ -31,6 +31,7 @@ export default interface singleProductType {
   price: number;
   size: string[];
   description: singleProductTypeDescription[];
+  _id:string
 }
 
 export interface allProductsFetcherType {

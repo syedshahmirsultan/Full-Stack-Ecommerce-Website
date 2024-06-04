@@ -13,3 +13,6 @@ const KidsProducts = async () => {
 }
 
 export default KidsProducts;
+
+
+
