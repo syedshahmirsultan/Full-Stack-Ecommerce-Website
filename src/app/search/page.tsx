@@ -32,10 +32,9 @@
 // };
 
 // export default Search;
-
 "use client"
 import React, { useEffect, useState } from 'react';
-import { useSearchParams,useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import AllProductGridViewer from '../components/AllProductGridViewer';
 import { searchProductsFetcherFromSanity } from '@/utils/apiCalling';
 import { allProductsFetcherType } from '../../../types';
@@ -65,4 +64,12 @@ const Search = () => {
     return <AllProductGridViewer productData={productData.result} />;
 };
 
-export default Search;
+// Wrap Search component in a Suspense boundary
+const SearchWithSuspense = () => (
+    <React.Suspense fallback={<div>Loading...</div>}>
+        <Search />
+    </React.Suspense>
+);
+
+export default SearchWithSuspense;
+
