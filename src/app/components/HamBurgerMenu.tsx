@@ -1,4 +1,3 @@
-// components/HamburgerMenu.tsx
 "use client"
 import React, { useState } from 'react';
 import { Menu, ShoppingCart, X } from 'lucide-react';
@@ -27,24 +26,23 @@ const HamburgerMenu: React.FC = () => {
           <li className='mb-6'>
               <Link href="/cart">
               <div className="absolute bg-gray-200 h-8 w-8 rounded-full flex items-center justify-center mr-16">
-        <ShoppingCart size={20} className="text-black" />
-    <div className="absolute right-[1px] top-[2px] bg-red-500 h-4 w-4 text-white rounded-full text-center text-xs">
-        0</div>
+        <ShoppingCart size={22} className="text-black" />
+    
       </div>
               </Link>
             </li>
             <li>
-              <Link href="/female" className="text-slate-700 hover:bg-gray-200 mt-4">Female</Link>
+              <Link href="/female" className="text-slate-700  pl-16 pr-16 h-16 hover:bg-gray-200 mt-16">Female</Link>
             </li>
 
             <li>
-              <Link href="/male" className="text-slate-700 hover:bg-gray-200">Male</Link>
+              <Link href="/male" className="text-slate-700 pl-16 pr-16 hover:bg-gray-200">Male</Link>
             </li>
             <li>
-              <Link href="/kids" className="text-slate-700 hover:bg-gray-200">Kids</Link>
+              <Link href="/kids" className="text-slate-700 pl-16 pr-16 hover:bg-gray-200">Kids</Link>
             </li>
            <li>
-  <Link href="/allProducts" className="text-slate-700 hover:bg-gray-200 whitespace-nowrap">
+  <Link href="/allProducts" className="text-slate-700 pl-16 pr-16 hover:bg-gray-200 whitespace-nowrap">
     All Products
   </Link>
 </li>

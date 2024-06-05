@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 const Jewellery = () => {
@@ -46,9 +47,9 @@ const Jewellery = () => {
    This piece is ethically<br/> crafted in our small<br/> family-owned workshop in Peru with unmatched<br/> attention to detail and<br/> care. The Natural color<br/> is the actual
     natural<br/> color of the fiber<br/>, undyed and 100%<br/> traceable.
     </p>
-    <button className="px-6 py-2 mt-8 text-gray-100 text-center bg-gray-900  rounded-lg hover:bg-gray-800">
+    <Link href="/products"><button className="px-6 py-2 mt-8 text-gray-100 text-center bg-gray-900  rounded-lg hover:bg-gray-800">
 See All Products
-        </button> 
+        </button> </Link>
 </div>
 </div>
  </div>  

@@ -32,8 +32,7 @@ const Brief = async({params} :{params :{slug:string}}) => {
 async function Detail ({slug} :{slug:string}){
     const data = await detailOfSingleProductFromSanity(slug);
     const { getUser } = getKindeServerSession();
-    //@ts-ignore
-    const user: KindeUser= getUser();
+    const user = await getUser();
 return (
     <>
     <BriefProduct product={data.result[0]} user={user}/>

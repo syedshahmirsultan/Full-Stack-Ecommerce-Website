@@ -4,6 +4,7 @@ import TopLevel from './components/TopLabel';
 import TopLabel from "./components/TopLabel";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Toaster/>
         <TopLabel/>
         <div className="max-w-[1250px] mx-auto"> <NavBar/>{children}
         <Footer/></div></body>

@@ -1,18 +1,3 @@
-// import React from 'react';
-
-// const NewsLetter = () => {
-//     return (
-//         <section className='pt-80 pb-80 flex flex-col relative'>
-//             <h1 className="text-slate-950 text-5xl font-bold lg:mx-auto">Subscribe Our NewsLetter</h1>
-//             <p className="text-slate-700 mt-6 lg:mx-auto text-xl font-semibold">Get the latest information and<br/> 
-//                promo offers directly</p>
-//               <div className=" absolute lg:mx-auto -z-50"> <h1 className="text-slate-300/70  text-8xl font-bold"> NEWSLETTER</h1>
-//        </div> </section>
-//     );
-// }
-
-// export default NewsLetter;
-
 import React from 'react';
 
 const NewsLetter = () => {

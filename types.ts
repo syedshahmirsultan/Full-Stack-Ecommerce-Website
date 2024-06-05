@@ -27,7 +27,7 @@ export default interface singleProductType {
   producttype: string;
   image: Image[];
   productname: string;
-  slug: singleProductTypeSlug;  // Changed from string[] to singleProductTypeSlug
+  slug: singleProductTypeSlug; 
   price: number;
   size: string[];
   description: singleProductTypeDescription[];

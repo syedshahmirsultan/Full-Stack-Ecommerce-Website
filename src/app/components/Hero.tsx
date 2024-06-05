@@ -1,5 +1,6 @@
 import { ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Hero = () => {
@@ -13,10 +14,10 @@ Sale 70%
 An Industrial <br/>Take on <br/> Streetwear
 </h1>
 <p className='text-zinc-900 text-lg text-center lg:text-start'>Anyone can beat you but no one can <br/> beat your outfit as long as you wear <br/> Dine outfits.</p>
-<button className='flex bg-gray-950 h-16 w-36 border-2 border-slate-950 rounded-sm place-self-center lg:place-self-start'>
+<Link href="/products"><button className='flex bg-gray-950 h-16 w-36 border-2 border-slate-950 rounded-sm place-self-center lg:place-self-start'>
 <ShoppingCart size={20} className="text-white place-self-center ml-2  mr-4" />
 <div className="font-semibold text-gray-100 text-md place-self-center">Start <br/> Shopping</div>
-</button>
+</button></Link>
 <div className="grid grid-cols-2 ml-8 lg:grid-cols-4 gap-x-6 gap-y-6">
 <Image src="/images/bazaar.png" alt="Image of Bazaar logo" width={80} height={80}/>
 <Image src="/images/bustle.png" alt="Image of Bustle Logo" width={80} height={80}/>
