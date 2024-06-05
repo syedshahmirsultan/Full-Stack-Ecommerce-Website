@@ -1,28 +1,28 @@
 "use client"
-import React from 'react';
-import { useSearchParams, redirect } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { useRouter } from 'next/router';
 import AllProductGridViewer from '../components/AllProductGridViewer';
 import { searchProductsFetcherFromSanity } from '@/utils/apiCalling';
 import { allProductsFetcherType } from '../../../types';
 
 const Search = () => {
+    const router = useRouter();
     const params = useSearchParams();
+    const [productData, setProductData] = useState<allProductsFetcherType | null>(null);
     
-    if (!params.has("query")) {
-        redirect('/products');
-        return null;
-    }
-    
-    const searchValue = params.get("query") as string;
-    const [productData, setProductData] = React.useState<allProductsFetcherType | null>(null);
-    
-    React.useEffect(() => {
-        const fetchData = async () => {
-            const data = await searchProductsFetcherFromSanity(searchValue);
-            setProductData(data as allProductsFetcherType);
-        };
-        fetchData();
-    }, [searchValue]);
+    useEffect(() => {
+        if (!params.has("query")) {
+            router.push('/products');
+        } else {
+            const searchValue = params.get("query") as string;
+            const fetchData = async () => {
+                const data = await searchProductsFetcherFromSanity(searchValue);
+                setProductData(data as allProductsFetcherType);
+            };
+            fetchData();
+        }
+    }, [params, router]);
     
     if (!productData) {
         return <div>Loading...</div>;
