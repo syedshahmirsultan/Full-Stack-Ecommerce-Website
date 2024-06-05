@@ -35,8 +35,7 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { useRouter } from 'next/router';
+import { useSearchParams,useRouter } from 'next/navigation';
 import AllProductGridViewer from '../components/AllProductGridViewer';
 import { searchProductsFetcherFromSanity } from '@/utils/apiCalling';
 import { allProductsFetcherType } from '../../../types';
