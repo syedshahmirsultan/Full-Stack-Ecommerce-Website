@@ -1,29 +1,28 @@
 "use client";
 
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import AllProductGridViewer from '../components/AllProductGridViewer';
 import { searchProductsFetcherFromSanity } from '@/utils/apiCalling';
 import { allProductsFetcherType } from '../../../types';
 
-const Search = () => {
+const SearchComponent = () => {
     const router = useRouter();
     const params = useSearchParams();
     const [productData, setProductData] = useState<allProductsFetcherType | null>(null);
     const [loading, setLoading] = useState(true);
 
-    const query = useMemo(() => params.get("query"), [params]);
-
     useEffect(() => {
-        if (!query) {
+        if (!params.has("query")) {
             router.push('/products');
             return;
         }
 
+        const searchValue = params.get("query") as string;
         const fetchData = async () => {
             setLoading(true);
             try {
-                const data = await searchProductsFetcherFromSanity(query);
+                const data = await searchProductsFetcherFromSanity(searchValue);
                 setProductData(data as allProductsFetcherType);
             } catch (error) {
                 console.error("Failed to fetch products", error);
@@ -34,7 +33,7 @@ const Search = () => {
         };
 
         fetchData();
-    }, [query, router]);
+    }, [params, router]);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -47,14 +46,15 @@ const Search = () => {
     return <AllProductGridViewer productData={productData.result} />;
 };
 
+const Search = () => {
+    return (
+        <Suspense fallback={<div>Loading...</div>}>
+            <SearchComponent />
+        </Suspense>
+    );
+};
+
 export default Search;
-
-
-
-
-
-
-
 
 
 
