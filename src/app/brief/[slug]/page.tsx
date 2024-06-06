@@ -43,3 +43,36 @@ return (
 export default Brief;
 
 
+
+
+
+
+// // "use server"
+// import React from 'react';
+// import BriefProduct from '@/app/components/BriefProduct';
+// import { detailOfSingleProductFromSanity } from '@/utils/apiCalling';
+// import { KindeUser } from '@kinde-oss/kinde-auth-nextjs/types';
+
+// const Brief = ({ product, user }: { product: any, user: KindeUser | null }) => {
+//     return (
+//         <div>
+//             <BriefProduct product={product} user={user} />
+//         </div>
+//     );
+// }
+
+// export async function getServerSideProps({ params }: { params: { slug: string } }) {
+//     const slug = params.slug;
+//     const data = await detailOfSingleProductFromSanity(slug);
+//     // Fetch user session here if needed
+//     const user = null; // Placeholder for user session
+
+//     return {
+//         props: {
+//             product: data.result[0],
+//             user
+//         }
+//     };
+// }
+
+// export default Brief;
