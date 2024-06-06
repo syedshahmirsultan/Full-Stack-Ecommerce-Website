@@ -61,7 +61,7 @@ export async function detailOfSingleProductFromSanity(search:string){
  
 
 export async function getAllCartProductsByUserid(userid:string){
-const res = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/cartFunc?userid=${userid}`)
+const res = await fetch(`${BASE_PATH_FORAPI}/api/cartFunc?userid=${userid}`)
 
 if(!res.ok){
    return "Error"
@@ -89,7 +89,7 @@ return "Error"
 
 
 export async function addToCartApiCall(userid:string,productid:string){
-   const res = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/cartFunc`,{
+   const res = await fetch(`${BASE_PATH_FORAPI}/api/cartFunc`,{
       method :"POST",
       body :JSON.stringify({
          userid:userid,
