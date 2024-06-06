@@ -1,4 +1,3 @@
-"use server"
 import allProductFetherFromSanity, { detailOfSingleProductFromSanity } from '@/utils/apiCalling';
 import singleProductType, { allProductsFetcherType } from '../../../../types';
 import BriefProduct from '@/app/components/BriefProduct';
