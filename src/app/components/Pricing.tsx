@@ -17,7 +17,7 @@ const Pricing = ({ productData, data }: { productData: singleProductType[], data
     });
 
     try {
-      let response = await fetch(`http://localhost:3000/api/checkout_session`, {
+      let response = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/checkout_session`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
