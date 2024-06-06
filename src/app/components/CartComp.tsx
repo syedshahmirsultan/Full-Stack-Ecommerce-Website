@@ -11,6 +11,9 @@ import Quantity from "./Quantity";
 import Pricing from "./Pricing";
 import { KindeUser } from "@kinde-oss/kinde-auth-nextjs/types";
 
+
+export const dynamic = 'force-dynamic';
+
 const CartMain = ({ data,user }: { data: typeOfCart[],user:KindeUser }) => {
   const [productData, setProductData] = useState<singleProductType[]>([]);
 

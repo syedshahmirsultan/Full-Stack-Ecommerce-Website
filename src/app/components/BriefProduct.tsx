@@ -7,6 +7,8 @@ import { KindeUser } from '@kinde-oss/kinde-auth-nextjs/types';
 import { addToCartApiCall } from '@/utils/apiCalling';
 import { useToast } from '@/components/ui/use-toast';
 
+export const dynamic = 'force-dynamic';
+
 const BriefProduct = ({ product ,user }: { product: singleProductType, user:KindeUser|null }) => {
     const [size, setSize] = useState<string>(product.size[0]);
     const [activeImageUrl, setActiveImageUrl] = useState<string>(urlForImage(product.image[0]));
@@ -15,11 +17,9 @@ const BriefProduct = ({ product ,user }: { product: singleProductType, user:Kind
             return urlForImage(element);
         });
     });
-    const { toast } = useToast();
-
-    
 
 
+const { toast } = useToast();
 
       async function handleAddToCart(){
      
