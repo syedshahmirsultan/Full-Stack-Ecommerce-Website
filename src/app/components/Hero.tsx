@@ -14,7 +14,7 @@ Sale 70%
 An Industrial <br/>Take on <br/> Streetwear
 </h1>
 <p className='text-zinc-900 text-lg text-center lg:text-start'>Anyone can beat you but no one can <br/> beat your outfit as long as you wear <br/> Dine outfits.</p>
-<Link href="/products"><button className='flex bg-gray-950 h-16 w-36 border-2 border-slate-950 rounded-sm place-self-center lg:place-self-start'>
+<Link href="/products"><button className='flex bg-gray-950 h-16 w-36 border-2 border-slate-950 rounded-sm ml-6 lg:ml-0 lg:place-self-start'>
 <ShoppingCart size={20} className="text-white place-self-center ml-2  mr-4" />
 <div className="font-semibold text-gray-100 text-md place-self-center">Start <br/> Shopping</div>
 </button></Link>
