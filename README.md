@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+#🛍️ 𝐅𝐔𝐋𝐋-𝐒𝐓𝐀𝐂𝐊 𝐄𝐂𝐎𝐌𝐌𝐄𝐑𝐂𝐄 𝐖𝐄𝐁𝐒𝐈𝐓𝐄 
+This is a full-stack e-commerce website. You can browse through the products available on the website and add them to your shopping cart. Additionally, you have the option to adjust the quantity of the products you wish to order. Once you're ready to make a purchase, simply proceed to checkout, and the website will redirect you to the payment page powered by Stripe.
 
-## Getting Started
+## Technologies Used 
+-[Next.js](https://nextjs.org/blog/next-14-2)
+-[TypeScript](https://www.typescriptlang.org/)
+-[Tailwind CSS](https://tailwindcss.com/)
+-[Sanity](https://www.sanity.io/)
+-[Kinde](https://kinde.com/)
+-[Lucide React](https://lucide.dev/icons/)
+-[Drizzle ORM](https://orm.drizzle.team/)
+-[Stripe](https://stripe.com/)
+-[Vercel Postgres](https://vercel.com/)
+-[Zod](https://zod.dev/)
 
-First, run the development server:
+I use Next.js as the framework and TypeScript as the programming language for developing the applications. For styling, I utilize Tailwind CSS and integrate Lucide Icons to enhance the visual appeal of the website. Additionally, I incorporate Sanity to dynamically fetch data for the website. For authentication, I rely on Kinde. I utilize Vercel Postgres Database to store client data and communicate with the database through Drizzle ORM (Object Relational Mapping). To ensure data integrity, I implement Zod for type safety. Finally, for seamless payment processing and checkout, I integrate Stripe.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##Features 
+- 𝐅𝐮𝐥𝐥-𝐒𝐭𝐚𝐜𝐤 𝐄-𝐂𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐅𝐮𝐧𝐜𝐭𝐢𝐨𝐧𝐚𝐥𝐢𝐭𝐲: The website offers comprehensive e-commerce capabilities, including browsing products, adding them to the shopping cart, and seamless checkout.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- 𝐏𝐫𝐨𝐝𝐮𝐜𝐭 𝐌𝐚𝐧𝐚𝐠𝐞𝐦𝐞𝐧𝐭: Users can easily browse through available products and add them to their shopping carts.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 𝐅𝐥𝐞𝐱𝐢𝐛𝐥𝐞 𝐎𝐫𝐝𝐞𝐫𝐢𝐧𝐠: Customers have the flexibility to adjust the quantity of products they wish to order before checkout.
 
-## Learn More
+- 𝐒𝐞𝐜𝐮𝐫𝐞 𝐏𝐚𝐲𝐦𝐞𝐧𝐭 𝐏𝐫𝐨𝐜𝐞𝐬𝐬𝐢𝐧𝐠: The website ensures secure payment processing, redirecting users to the payment page powered by Stripe for transactions.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To Vist the Website : [Click Here !](https://shahmir-full-stack-ecommerce-website.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
