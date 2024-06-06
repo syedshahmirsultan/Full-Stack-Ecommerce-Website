@@ -44,7 +44,7 @@ const SearchComponent = () => {
     }, [params, router]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return <div className='text-2xl mt-8  font-bold mt-12 mb-80'>Loading...</div>;
     }
 
     if (error) {
@@ -52,7 +52,7 @@ const SearchComponent = () => {
     }
 
     if (!productData || !productData.result || productData.result.length === 0) {
-        return <div>No products found</div>;
+        return <div className="mt-40 text-center mb-80 text-3xl lg:text-4xl font-bold ">No products found</div>;
     }
 
     return <AllProductGridViewer productData={productData.result} />;

@@ -1,7 +1,7 @@
 import React from 'react';
 import singleProductType from '../../../types';
 import { typeOfCart } from '@/lib/drizzle';
-import BASE_PATH_FORAPI from '@/utils/basePath';
+
 
 const Pricing = ({ productData, data }: { productData: singleProductType[], data: typeOfCart[] }) => {
   const shipping = 10;
@@ -17,7 +17,7 @@ const Pricing = ({ productData, data }: { productData: singleProductType[], data
     });
 
     try {
-      let response = await fetch(`${BASE_PATH_FORAPI}/api/checkout_session`, {
+      let response = await fetch(`http://localhost:3000/api/checkout_session`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
