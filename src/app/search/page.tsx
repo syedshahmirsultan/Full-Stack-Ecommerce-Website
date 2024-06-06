@@ -11,6 +11,7 @@ const SearchComponent = () => {
     const params = useSearchParams();
     const [productData, setProductData] = useState<allProductsFetcherType | null>(null);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         if (!params.has("query")) {
@@ -21,11 +22,18 @@ const SearchComponent = () => {
         const searchValue = params.get("query") as string;
         const fetchData = async () => {
             setLoading(true);
+            setError(null);
             try {
-                const data = await searchProductsFetcherFromSanity(searchValue);
-                setProductData(data as allProductsFetcherType);
+                const response = await searchProductsFetcherFromSanity(searchValue);
+                console.log('Fetched data:', response); // Log data for debugging
+                if (response && response.result && response.result.length > 0) {
+                    setProductData(response as allProductsFetcherType);
+                } else {
+                    setProductData(null);
+                }
             } catch (error) {
                 console.error("Failed to fetch products", error);
+                setError("Failed to fetch products. Please try again later.");
                 setProductData(null);
             } finally {
                 setLoading(false);
@@ -39,6 +47,10 @@ const SearchComponent = () => {
         return <div>Loading...</div>;
     }
 
+    if (error) {
+        return <div>{error}</div>;
+    }
+
     if (!productData || !productData.result || productData.result.length === 0) {
         return <div>No products found</div>;
     }
@@ -46,7 +58,7 @@ const SearchComponent = () => {
     return <AllProductGridViewer productData={productData.result} />;
 };
 
-const Search = () => {
+const SearchPage = () => {
     return (
         <Suspense fallback={<div>Loading...</div>}>
             <SearchComponent />
@@ -54,8 +66,7 @@ const Search = () => {
     );
 };
 
-export default Search;
-
+export default SearchPage;
 
 
 
