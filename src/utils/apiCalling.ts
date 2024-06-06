@@ -61,7 +61,7 @@ export async function detailOfSingleProductFromSanity(search:string){
  
 
 export async function getAllCartProductsByUserid(userid:string){
-const res = await fetch(`${BASE_PATH_FORAPI}/api/cartFunc?userid=${userid}`)
+const res = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/cartFunc?userid=${userid}`)
 
 if(!res.ok){
    return "Error"
@@ -89,7 +89,7 @@ return "Error"
 
 
 export async function addToCartApiCall(userid:string,productid:string){
-   const res = await fetch(`${BASE_PATH_FORAPI}/api/cartFunc`,{
+   const res = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/cartFunc`,{
       method :"POST",
       body :JSON.stringify({
          userid:userid,
@@ -106,7 +106,7 @@ export async function addToCartApiCall(userid:string,productid:string){
 
 export async function updateCartItem(userid:string,productid:string,quantity:number){
    console.log("QUANTITY :",quantity);
-   const res = await fetch(`${BASE_PATH_FORAPI}/api/cartFunc`,{
+   const res = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/cartFunc`,{
       method :"PUT",
       body :JSON.stringify({
          userid:userid,
@@ -120,7 +120,7 @@ export async function updateCartItem(userid:string,productid:string,quantity:num
 
 
 export async function handleDelete(userid:string,productid:string){
-   const res = await fetch(`${BASE_PATH_FORAPI}/api/cartFunc?userid=${userid}&productid=${productid}`,{
+   const res = await fetch(`https://shahmir-full-stack-ecommerce-website.vercel.app/api/cartFunc?userid=${userid}&productid=${productid}`,{
 method :"DELETE"
    })
    await refreshData();
