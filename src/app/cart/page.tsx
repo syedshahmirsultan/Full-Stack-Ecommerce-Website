@@ -5,7 +5,7 @@ import {getAllCartProductsByUserid} from '@/utils/apiCalling'
 import { typeOfCart } from '@/lib/drizzle';
 import CartMain from '../components/CartComp'
 
-
+export const dynamic ='force-dynamic'
 const Cart = async() => {
     const { getUser } = getKindeServerSession();
     const user = await getUser();

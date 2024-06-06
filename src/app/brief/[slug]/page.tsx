@@ -5,7 +5,7 @@ import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import { KindeUser } from '@kinde-oss/kinde-auth-nextjs/types';
 
 
-
+export const dynamic='force-dynamic'
 
 export async function generateStaticParams(){
     const data = await allProductFetherFromSanity() as allProductsFetcherType;
