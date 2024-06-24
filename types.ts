@@ -1,14 +1,5 @@
 import { Image } from "sanity";
 
-export interface singleProductTypeImage {
-  _type: string;
-  _key: string;
-  asset: {
-    _ref: string;
-    _type: string;
-  };
-}
-
 export interface singleProductTypeDescription {
   _key: string;
   markDefs: [];
